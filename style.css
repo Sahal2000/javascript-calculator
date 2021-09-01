@@ -1,0 +1,59 @@
+body
+{
+    background-image: url(https://images.unsplash.com/photo-1557683316-973673baf926?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1615&q=80);
+}
+
+
+.calculator
+{
+    border: 1px solid rgb(62, 72, 83);
+    background-color: rgb(62, 72, 83);
+    border-radius: 2%;
+    height: 420px;
+    width: 280px;
+    margin: auto;
+    margin-top: 12%;
+}
+
+.buttons
+{
+    margin: 5px;
+}
+
+.displayMonitor
+{
+    background-color: rgb(145, 218, 176);
+    height: 75px;
+    width: 260px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+#display
+{
+    font-weight: 700;
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+
+.numberButton
+{
+    padding: 0px;
+    margin: 2px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    background-color: tan;
+}
+
+
+.ac 
+{
+    width: 128px;
+}
