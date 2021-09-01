@@ -1,4 +1,4 @@
-let plus = 0,minus = 0,mul = 0,div = 0,dot = 0,dotDivider = 1;
+let plus = 0,minus = 0,mul = 0,div = 0,dot = 0,dotDivider = 1,result = 0;
 let displayNumber,displayNumber2,firstValue = 0,secondValue = 0,operator = 0;
 
 function inputNumber(value)
@@ -30,7 +30,7 @@ function inputNumber(value)
 
 function acButton()
 {
-    plus = 0,minus = 0,mul = 0,div = 0;
+    plus = 0,minus = 0,mul = 0,div = 0,result = 0;
     firstValue = 0,secondValue = 0,operator = 0;
     displayNumber = " ",displayNumber2 = " ";
     document.getElementById("display").innerText = " ";
@@ -40,10 +40,17 @@ function delButton()
 {
     if(!operator)
     {
-        let temp = firstValue % 10;
-        firstValue /= 10;
-        firstValue = firstValue - temp/10;
-        document.getElementById("display").innerText = firstValue;
+        if(result || firstValue==0)
+        {
+            document.getElementById("display").innerText = "Invalid";
+        }
+        else
+        {
+            let temp = firstValue % 10;
+            firstValue /= 10;
+            firstValue = firstValue - temp/10;
+            document.getElementById("display").innerText = firstValue;
+        }
     }
     else
     {
@@ -70,7 +77,7 @@ function operateNumber(operation)
     else if(operation=='*')mul = 1;
     else if(operation=='/')div = 1;
     operator = 1;
-    displayNumber = firstValue.toString();
+    displayNumber = firstValue.toFixed(4).toString();
     displayNumber = displayNumber + operation;
     document.getElementById("display").innerText = displayNumber;
     displayNumber2 = displayNumber;
@@ -78,7 +85,7 @@ function operateNumber(operation)
 
 function equalFunction()
 {
-    dot = 0,dotDivider = 1;
+    dot = 0,dotDivider = 1,result = 1;
     operator = 0;
     if(plus)
     {
